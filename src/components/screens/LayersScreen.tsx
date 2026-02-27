@@ -6,7 +6,7 @@ import { BottomTabBar } from '../ui/BottomTabBar';
 
 const LAYERS = [
   { id: 'work',     label: 'Work',        sub: 'Regular & OT shifts',     color: '#3B5BDB', on: true },
-  { id: 'timeoff',  label: 'Time Off',    sub: 'PTO / Sick / Vacation',   color: '#059669', on: true },
+  { id: 'timeoff',  label: 'Time Off',    sub: 'PTO / Sick',              color: '#059669', on: true },
   { id: 'personal', label: 'Personal',   sub: 'Private events (only me)', color: '#06B6D4', on: true },
   { id: 'avail',    label: 'Availability',sub: 'Available / Unavailable', color: '#F59E0B', on: false },
   { id: 'ai',       label: 'AI Draft',    sub: 'Suggested by AI planner', color: '#8B5CF6', on: false },

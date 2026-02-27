@@ -64,11 +64,11 @@ export const MenuScreen: React.FC = () => {
               className="flex items-center justify-center rounded-full bg-gradient-to-br from-blue-400 to-indigo-500"
               style={{ width: 48, height: 48, border: '2.5px solid rgba(255,255,255,0.3)', flexShrink: 0 }}
             >
-              <span style={{ color: 'white', fontSize: 15, fontWeight: 700 }}>SV</span>
+              <span style={{ color: 'white', fontSize: 15, fontWeight: 700 }}>JS</span>
             </div>
             <div className="min-w-0">
-              <p style={{ color: 'white', fontSize: 14, fontWeight: 700, lineHeight: 1.2 }}>Sticky Vladimir</p>
-              <p style={{ color: 'rgba(147,197,253,1)', fontSize: 10, marginTop: 3 }}>Nurse Manager · MER 2N</p>
+              <p style={{ color: 'white', fontSize: 14, fontWeight: 700, lineHeight: 1.2 }}>John Smith</p>
+              <p style={{ color: 'rgba(147,197,253,1)', fontSize: 10, marginTop: 3 }}>Nurse Manager · Floor 2</p>
             </div>
             <ChevronRight size={16} color="rgba(147,197,253,0.6)" style={{ flexShrink: 0, marginLeft: 'auto' }} />
           </div>

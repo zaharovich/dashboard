@@ -25,7 +25,7 @@ export const MonthViewScreen: React.FC = () => {
         {[
           { label: 'Shifts', value: '12', color: '#3B5BDB' },
           { label: 'Hours',  value: '96h', color: '#111827' },
-          { label: 'PTO',    value: '1d',  color: '#12B76A' },
+          { label: 'PTO',    value: '8h',  color: '#12B76A' },
         ].map((s) => (
           <div key={s.label} className="text-center">
             <p style={{ fontSize: 14, fontWeight: 800, color: s.color }}>{s.value}</p>

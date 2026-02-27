@@ -41,14 +41,14 @@ export const ShiftDetailScreen: React.FC = () => {
             </span>
             <span style={{ fontSize: 10, color: '#9ca3af' }}>Sep 18, 2026</span>
           </div>
-          <p style={{ fontSize: 18, fontWeight: 800, color: '#1e2d5a', marginTop: 6 }}>MER 2N Medical</p>
+          <p style={{ fontSize: 18, fontWeight: 800, color: '#1e2d5a', marginTop: 6 }}>Floor 2</p>
         </div>
 
         {/* Details */}
         <div style={{ margin: '0 16px 12px', padding: '12px 14px', background: '#f9fafb', borderRadius: 16, display: 'flex', flexDirection: 'column', gap: 10 }}>
           {[
             { Icon: Clock,   text: '7:00 AM — 7:00 PM', sub: '12 hours' },
-            { Icon: MapPin,  text: 'MER Floor 2N',       sub: 'Medical Unit' },
+            { Icon: MapPin,  text: 'Floor 2',            sub: 'Medical Unit' },
             { Icon: User,    text: 'Registered Nurse',   sub: 'RN · Regular rate' },
           ].map(({ Icon, text, sub }) => (
             <div key={text} className="flex items-center" style={{ gap: 10 }}>

@@ -42,12 +42,12 @@ export const colors = {
 } as const;
 
 export const MOCK_SHIFTS = [
-  { id: '1', day: 1, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
-  { id: '2', day: 1, label: 'Brady', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
-  { id: '3', day: 2, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
-  { id: '4', day: 2, label: 'Brady', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
-  { id: '5', day: 3, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
-  { id: '6', day: 3, label: 'Brady', type: 'ot' as const, time: '7a–7p', unit: 'MER 2N' },
-  { id: '7', day: 4, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '1', day: 1, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'Floor 2' },
+  { id: '2', day: 1, label: 'Brady', type: 'work' as const, time: '7a–7p', unit: 'Floor 2' },
+  { id: '3', day: 2, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'Floor 2' },
+  { id: '4', day: 2, label: 'Brady', type: 'work' as const, time: '7a–7p', unit: 'Floor 2' },
+  { id: '5', day: 3, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'Floor 2' },
+  { id: '6', day: 3, label: 'Brady', type: 'ot' as const, time: '7a–7p', unit: 'Floor 2' },
+  { id: '7', day: 4, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'Floor 2' },
   { id: '8', day: 5, label: 'PTO', type: 'pto' as const, time: 'All Day', unit: '' },
 ] as const;

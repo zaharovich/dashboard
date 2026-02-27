@@ -39,10 +39,10 @@ export const PtoDetailScreen: React.FC = () => {
             <div style={{ width: 28, height: 28, borderRadius: 8, background: '#f0fdf4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Palmtree size={14} color="#12B76A" strokeWidth={2} />
             </div>
-            <span style={{ fontSize: 10, fontWeight: 700, color: '#12B76A' }}>VACATION / PTO</span>
+            <span style={{ fontSize: 10, fontWeight: 700, color: '#12B76A' }}>PTO</span>
           </div>
           <p style={{ fontSize: 18, fontWeight: 800, color: '#1e2d5a' }}>Paid Time Off</p>
-          <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 2 }}>Mon, Sep 9 – Tue, Sep 10 · 2 days</p>
+          <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 2 }}>Mon, Sep 9 – Tue, Sep 10 · 16 hrs</p>
         </div>
 
         {/* Status card */}
@@ -59,9 +59,9 @@ export const PtoDetailScreen: React.FC = () => {
           <div style={{ marginTop: 10, paddingTop: 10, borderTop: '1px solid #bbf7d0' }}>
             <div className="flex justify-between">
               {[
-                { label: 'Used',      value: '2d',  color: '#059669' },
-                { label: 'Remaining', value: '10d', color: '#374151' },
-                { label: 'Total',     value: '12d', color: '#9ca3af' },
+                { label: 'Used',      value: '16h',  color: '#059669' },
+                { label: 'Remaining', value: '80h', color: '#374151' },
+                { label: 'Total',     value: '96h', color: '#9ca3af' },
               ].map(s => (
                 <div key={s.label} className="text-center">
                   <p style={{ fontSize: 14, fontWeight: 800, color: s.color }}>{s.value}</p>

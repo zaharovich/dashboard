@@ -1,6 +1,7 @@
 import React from 'react';
+import { Video } from 'lucide-react';
 
-type ShiftType = 'work' | 'ot' | 'pto' | 'sick' | 'callout' | 'calloff' | 'personal' | 'open' | 'ai' | 'training' | 'certexpiring' | 'conflict';
+type ShiftType = 'work' | 'ot' | 'pto' | 'sick' | 'callout' | 'calloff' | 'personal' | 'open' | 'ai' | 'training' | 'certexpiring' | 'conflict' | 'teams';
 
 interface EventPillProps {
   type: ShiftType;
@@ -22,14 +23,17 @@ const TYPE_STYLES: Record<ShiftType, { bg: string; text: string }> = {
   training:    { bg: '#EA580C', text: '#fff' },
   certexpiring:{ bg: '#DC2626', text: '#fff' },
   conflict:    { bg: '#BE185D', text: '#fff' },
+  teams:       { bg: '#5B5FC7', text: '#fff' },
 };
 
 export const EventPill: React.FC<EventPillProps> = ({ type, label, time, compact = false }) => {
   const { bg, text } = TYPE_STYLES[type];
+  const isTeams = type === 'teams';
 
   if (compact) {
     return (
-      <div style={{ background: bg, borderRadius: 3, padding: '1px 4px', width: '100%' }}>
+      <div style={{ background: bg, borderRadius: 3, padding: '1px 4px', width: '100%', display: 'flex', alignItems: 'center', gap: 3 }}>
+        {isTeams && <Video size={8} color={text} strokeWidth={2.5} style={{ flexShrink: 0 }} />}
         <p style={{ color: text, fontSize: 8, fontWeight: 600, lineHeight: 1.3, overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
           {label}
         </p>
@@ -39,9 +43,12 @@ export const EventPill: React.FC<EventPillProps> = ({ type, label, time, compact
 
   return (
     <div style={{ background: bg, borderRadius: 5, padding: '3px 6px', width: '100%' }}>
-      <p style={{ color: text, fontSize: 9, fontWeight: 700, lineHeight: 1.3, overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
-        {label}
-      </p>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+        {isTeams && <Video size={10} color={text} strokeWidth={2.5} style={{ flexShrink: 0 }} />}
+        <p style={{ color: text, fontSize: 9, fontWeight: 700, lineHeight: 1.3, overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
+          {label}
+        </p>
+      </div>
       {time && (
         <p style={{ color: text, fontSize: 8, opacity: 0.8, lineHeight: 1.3 }}>{time}</p>
       )}

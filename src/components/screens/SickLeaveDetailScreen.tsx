@@ -54,7 +54,7 @@ export const SickLeaveDetailScreen: React.FC = () => {
             <CalendarRange size={16} color="#d97706" strokeWidth={2} />
             <div>
               <p style={{ fontSize: 12, fontWeight: 700, color: '#374151' }}>Tue, Sep 17 (1 day)</p>
-              <p style={{ fontSize: 10, color: '#9ca3af', marginTop: 1 }}>Full shift covered · MER 2N</p>
+              <p style={{ fontSize: 10, color: '#9ca3af', marginTop: 1 }}>Full shift covered · Floor 2</p>
             </div>
           </div>
 
@@ -80,7 +80,7 @@ export const SickLeaveDetailScreen: React.FC = () => {
           {[
             { label: 'Used this year', value: '3d', color: '#d97706' },
             { label: 'Remaining',      value: '7d', color: '#374151' },
-            { label: 'Annual limit',   value: '10d', color: '#9ca3af' },
+            { label: 'Annual limit',   value: '80h', color: '#9ca3af' },
           ].map(s => (
             <div key={s.label} className="text-center">
               <p style={{ fontSize: 14, fontWeight: 800, color: s.color }}>{s.value}</p>

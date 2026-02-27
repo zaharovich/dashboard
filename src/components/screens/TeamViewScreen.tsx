@@ -4,7 +4,7 @@ import { CalendarToolbar } from '../ui/CalendarToolbar';
 import { BottomTabBar } from '../ui/BottomTabBar';
 
 const TEAM_SHIFTS = [
-  { name: 'Vladimir S.',  role: 'RN',  days: [0,1,1,1,0,1,0], color: '#3B5BDB' },
+  { name: 'John Smith',   role: 'RN',  days: [0,1,1,1,0,1,0], color: '#3B5BDB' },
   { name: 'Sarah M.',     role: 'RN',  days: [1,0,1,0,1,0,1], color: '#7C3AED' },
   { name: 'James K.',     role: 'LVN', days: [0,1,0,1,1,1,0], color: '#12B76A' },
   { name: 'Priya N.',     role: 'RN',  days: [1,1,0,0,1,0,1], color: '#F59E0B' },
@@ -26,7 +26,7 @@ export const TeamViewScreen: React.FC = () => {
       <div className="flex-shrink-0 bg-white" style={{ padding: '10px 14px 6px', borderBottom: '1px solid #f1f1f4' }}>
         <div className="flex items-center justify-between" style={{ marginBottom: 8 }}>
           <button style={{ fontSize: 12, color: '#9ca3af' }}>‹</button>
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#374151' }}>Sep 15 – Sep 21 · MER 2N</span>
+          <span style={{ fontSize: 11, fontWeight: 700, color: '#374151' }}>Sep 15 – Sep 21 · Floor 2</span>
           <button style={{ fontSize: 12, color: '#9ca3af' }}>›</button>
         </div>
 
@@ -92,13 +92,22 @@ export const TeamViewScreen: React.FC = () => {
 
         {/* Coverage summary */}
         <div style={{ marginTop: 6, padding: '10px 12px', background: '#eff3ff', borderRadius: 14, border: '1px solid #c7d2fe' }}>
-          <p style={{ fontSize: 9, fontWeight: 700, color: '#1e2d5a', marginBottom: 6 }}>Week Coverage · MER 2N</p>
+          <p style={{ fontSize: 9, fontWeight: 700, color: '#1e2d5a', marginBottom: 6 }}>Week Coverage · Floor 2</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 4 }}>
             {DATES.map((_date, i) => {
               const count = TEAM_SHIFTS.filter(m => m.days[i]).length;
+              const display = count === 0 ? '' : String(count);
               return (
                 <div key={i} style={{ textAlign: 'center' }}>
-                  <p style={{ fontSize: 11, fontWeight: 800, color: count >= 3 ? '#12B76A' : '#F59E0B' }}>{count}</p>
+                  <p
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 800,
+                      color: count >= 3 ? '#12B76A' : '#F59E0B',
+                    }}
+                  >
+                    {display}
+                  </p>
                   <p style={{ fontSize: 7, color: '#9ca3af' }}>staff</p>
                 </div>
               );

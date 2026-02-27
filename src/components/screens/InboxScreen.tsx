@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeftRight, ClipboardList, Check } from 'lucide-react';
+import { ArrowLeftRight, ClipboardList, Check, AlertCircle } from 'lucide-react';
 import { BottomTabBar } from '../ui/BottomTabBar';
 
 const TABS = ['Requests', 'Updates', 'Alerts', 'Punches'];
@@ -22,7 +22,7 @@ const REQUESTS = [
     iconBg: '#f0fdf4',
     iconColor: '#12B76A',
     title: 'Open shift available',
-    sub: 'Fri Sep 20 · 7p–7a · MER 2N · $15/hr',
+    sub: 'Fri Sep 20 · 7p–7a · Floor 2 · $15/hr',
     time: '5h ago',
     actions: [
       { label: 'Accept', bg: '#3B5BDB', color: 'white' },
@@ -119,12 +119,37 @@ export const InboxScreen: React.FC = () => {
           </div>
         ))}
 
-        {/* Punches */}
+        {/* Missed Punch — entry point from Inbox */}
+        <div
+          className="bg-white rounded-2xl"
+          style={{
+            padding: '14px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', border: '1px solid #fef2f2',
+            background: 'linear-gradient(135deg, #fff 0%, #fef2f2 100%)',
+          }}
+        >
+          <div className="flex items-center gap-2" style={{ marginBottom: 10 }}>
+            <div style={{ width: 28, height: 28, borderRadius: 10, background: '#fef2f2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <AlertCircle size={14} color="#EF4444" strokeWidth={2} />
+            </div>
+            <div>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#111827' }}>Missed Punch</p>
+              <p style={{ fontSize: 10, color: '#6b7280', marginTop: 1 }}>Missed Clock Out + Lunch · Sep 17</p>
+            </div>
+          </div>
+          <button
+            className="w-full rounded-xl font-bold text-white"
+            style={{ paddingTop: 9, paddingBottom: 9, fontSize: 11, background: '#3B5BDB' }}
+          >
+            Add Punch
+          </button>
+        </div>
+
+        {/* Punches / Time Card */}
         <div
           className="bg-white rounded-2xl"
           style={{ padding: '14px', boxShadow: '0 1px 4px rgba(0,0,0,0.06)', border: '1px solid #f3f4f6' }}
         >
-          <p style={{ fontSize: 11, fontWeight: 700, color: '#6b7280', marginBottom: 12 }}>Today's Punches — Sep 18</p>
+          <p style={{ fontSize: 11, fontWeight: 700, color: '#6b7280', marginBottom: 12 }}>Today's Punches / Time Card — Sep 18</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
             {PUNCHES.map((p, i) => (
               <div key={i} className="flex items-center" style={{ gap: 10 }}>

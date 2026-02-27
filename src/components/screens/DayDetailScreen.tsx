@@ -67,7 +67,7 @@ export const DayDetailScreen: React.FC = () => {
         >
           <div className="flex items-start justify-between">
             <div>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#3B5BDB' }}>MER 2N Medical</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#3B5BDB' }}>Floor 2</p>
               <p style={{ fontSize: 10, color: '#6b7280', marginTop: 2 }}>7:00 AM — 7:00 PM · 12 hrs</p>
               <p style={{ fontSize: 9, color: '#9ca3af', marginTop: 2 }}>RN · Regular</p>
             </div>

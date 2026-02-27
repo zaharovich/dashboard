@@ -10,11 +10,11 @@ import { BottomTabBar } from '../ui/BottomTabBar';
 
 const ACTIONS = [
   { Icon: User,          label: 'Add Personal Event',    sub: 'Add a private event to your calendar',    color: '#06B6D4', bg: '#ecfeff' },
-  { Icon: Palmtree,      label: 'Request Vacation / PTO', sub: 'Select dates and notify your manager',   color: '#12B76A', bg: '#f0fdf4' },
-  { Icon: Thermometer,   label: 'Sick Leave',             sub: 'Today or date range + comment',          color: '#F59E0B', bg: '#fffbeb' },
-  { Icon: PhoneOff,      label: 'Call Out',               sub: 'Cancel your shift + notify manager',     color: '#EF4444', bg: '#fef2f2' },
-  { Icon: ArrowLeftRight,label: 'Request Swap',           sub: 'Choose a shift and select a colleague',  color: '#7C3AED', bg: '#f5f3ff' },
-  { Icon: CalendarCheck, label: 'Add Availability',       sub: 'Mark available or unavailable dates',    color: '#3B5BDB', bg: '#eff3ff' },
+  { Icon: Palmtree,      label: 'Request PTO',           sub: 'Select dates and notify your manager',   color: '#12B76A', bg: '#f0fdf4' },
+  { Icon: Thermometer,   label: 'Sick Leave',            sub: 'Today or date range + comment',          color: '#F59E0B', bg: '#fffbeb' },
+  { Icon: PhoneOff,      label: 'Call Out',              sub: 'Cancel your shift + notify manager',     color: '#EF4444', bg: '#fef2f2' },
+  { Icon: ArrowLeftRight,label: 'Request Swap',          sub: 'Choose a shift and select a colleague',  color: '#7C3AED', bg: '#f5f3ff' },
+  { Icon: CalendarCheck, label: 'Add Availability',      sub: 'Mark available or unavailable dates',    color: '#3B5BDB', bg: '#eff3ff' },
 ];
 
 export const AddActionSheetScreen: React.FC = () => {

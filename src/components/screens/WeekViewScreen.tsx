@@ -5,12 +5,12 @@ import { BottomTabBar } from '../ui/BottomTabBar';
 
 const WEEK_DAYS = [
   { short: 'Sun', date: 15, shifts: [] },
-  { short: 'Mon', date: 16, shifts: [{ label: 'MER 2N Medical', time: '7:00a – 7:00p', type: 'work', hrs: '12h' }, { label: 'Brady 7a', time: '7:00a – 7:00p', type: 'work', hrs: '12h' }] },
+  { short: 'Mon', date: 16, shifts: [{ label: 'Floor 2', time: '7:00a – 7:00p', type: 'work', hrs: '12h' }, { label: 'Brady 7a', time: '7:00a – 7:00p', type: 'work', hrs: '12h' }] },
   { short: 'Tue', date: 17, shifts: [{ label: 'Sick Leave', time: 'All Day', type: 'sick', hrs: '—' }] },
-  { short: 'Wed', date: 18, shifts: [{ label: 'MER 2N Medical', time: '7:00a – 7:00p', type: 'work', hrs: '12h' }] },
+  { short: 'Wed', date: 18, shifts: [{ label: 'Floor 2', time: '7:00a – 7:00p', type: 'work', hrs: '12h' }] },
   { short: 'Thu', date: 19, shifts: [] },
-  { short: 'Fri', date: 20, shifts: [{ label: 'MER 2N Medical', time: '7:00p – 7:00a', type: 'ot', hrs: '12h OT' }] },
-  { short: 'Sat', date: 21, shifts: [{ label: 'PTO', time: 'All Day', type: 'pto', hrs: '—' }] },
+  { short: 'Fri', date: 20, shifts: [{ label: 'Floor 2', time: '7:00p – 7:00a', type: 'ot', hrs: '12h OT' }] },
+  { short: 'Sat', date: 21, shifts: [{ label: 'PTO', time: 'All Day', type: 'pto', hrs: '8h' }] },
 ];
 
 const TYPE_COLORS: Record<string, { bg: string; bar: string; text: string }> = {

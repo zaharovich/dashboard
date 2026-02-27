@@ -9,18 +9,19 @@ interface CalendarGridProps {
 
 const DAYS_HEADER = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
-type EventType = 'work' | 'ot' | 'pto' | 'sick' | 'callout' | 'calloff' | 'personal' | 'open' | 'ai' | 'training' | 'certexpiring' | 'conflict';
+type EventType = 'work' | 'ot' | 'pto' | 'sick' | 'callout' | 'calloff' | 'personal' | 'open' | 'ai' | 'training' | 'certexpiring' | 'conflict' | 'teams';
 
 const CALENDAR_DATA: Record<number, Array<{ type: EventType; label: string }>> = {
   2:  [{ type: 'work',         label: 'Binns 7a' }, { type: 'work',        label: 'Brady 7a' }],
   3:  [{ type: 'work',         label: 'Binns 7a' }, { type: 'ot',          label: 'Brady OT' }],
-  4:  [{ type: 'work',         label: 'Binns 7a' }, { type: 'certexpiring',label: 'BLS Exp.' }],
-  9:  [{ type: 'work',         label: 'Binns 7a' }, { type: 'personal',    label: 'Dr Appt' }],
+  4:  [{ type: 'work',         label: 'Binns 7a' }, { type: 'certexpiring',label: 'BLS Exp.' }, { type: 'teams', label: 'Standup' }],
+  9:  [{ type: 'work',         label: 'Binns 7a' }, { type: 'personal',    label: 'Dr Appt' }, { type: 'teams', label: 'Team Sync' }],
   10: [{ type: 'pto',          label: 'PTO' }],
   11: [{ type: 'training',     label: 'Training' }],
   13: [{ type: 'conflict',     label: 'Conflict!' }, { type: 'work',       label: 'Binns 7a' }],
   16: [{ type: 'work',         label: 'Binns 7a' }, { type: 'work',        label: 'Brady 7a' }],
   17: [{ type: 'sick',         label: 'Sick' }],
+  18: [{ type: 'teams',        label: 'Huddle' }],
   23: [{ type: 'work',         label: 'Binns 7a' }],
   24: [{ type: 'calloff',      label: 'Call off' }],
   26: [{ type: 'certexpiring', label: 'ACLS Exp.' }],

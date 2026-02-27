@@ -41,7 +41,7 @@ export const CallOffDetailScreen: React.FC = () => {
             </div>
             <span style={{ fontSize: 11, fontWeight: 700, color: '#EF4444' }}>SHIFT CANCELLED BY MANAGER</span>
           </div>
-          <p style={{ fontSize: 17, fontWeight: 800, color: '#1e2d5a' }}>MER 2N Medical</p>
+          <p style={{ fontSize: 17, fontWeight: 800, color: '#1e2d5a' }}>Floor 2</p>
           <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 2 }}>Sat, Sep 21 · 7:00 AM – 3:00 PM · 8 hrs</p>
         </div>
 
@@ -64,7 +64,7 @@ export const CallOffDetailScreen: React.FC = () => {
           <p style={{ fontSize: 10, fontWeight: 700, color: '#059669', marginBottom: 6 }}>Suggested Alternative</p>
           <div className="flex items-center justify-between">
             <div>
-              <p style={{ fontSize: 12, fontWeight: 700, color: '#111827' }}>MER 3S Surgical</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: '#111827' }}>Floor 3</p>
               <p style={{ fontSize: 10, color: '#6b7280' }}>Sun Sep 22 · 7a–3p · 8 hrs</p>
             </div>
             <button style={{ fontSize: 10, fontWeight: 700, color: 'white', background: '#12B76A', padding: '5px 12px', borderRadius: 10 }}>

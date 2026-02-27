@@ -64,7 +64,7 @@ const ROWS = [
     screens: [
       { label: '+ Add Sheet',      screen: <AddActionSheetScreen /> },
       { label: 'Shift Details',    screen: <ShiftDetailScreen /> },
-      { label: 'PTO / Vacation',   screen: <PtoDetailScreen /> },
+      { label: 'PTO',              screen: <PtoDetailScreen /> },
       { label: 'Sick Leave',       screen: <SickLeaveDetailScreen /> },
       { label: 'Call Off Event',   screen: <CallOffDetailScreen /> },
       { label: 'Personal Event',   screen: <PersonalEventDetailScreen /> },
