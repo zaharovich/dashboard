@@ -45,7 +45,7 @@ export const AddEventScreen: React.FC = () => {
         >
           <div>
             <p style={{ fontSize: 10, color: '#9ca3af' }}>Selected date</p>
-            <p style={{ fontSize: 16, fontWeight: 800, color: '#1e2d5a', marginTop: 2 }}>Sep 18, 2024</p>
+            <p style={{ fontSize: 16, fontWeight: 800, color: '#1e2d5a', marginTop: 2 }}>Sep 18, 2026</p>
           </div>
           <div className="text-right">
             <p style={{ fontSize: 10, color: '#9ca3af' }}>Hours this week</p>

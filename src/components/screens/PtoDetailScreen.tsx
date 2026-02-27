@@ -51,7 +51,7 @@ export const PtoDetailScreen: React.FC = () => {
             <CheckCircle size={22} color="#12B76A" strokeWidth={2} />
             <div>
               <p style={{ fontSize: 13, fontWeight: 800, color: '#059669' }}>Approved</p>
-              <p style={{ fontSize: 10, color: '#6b7280', marginTop: 1 }}>Approved by Sarah M. · Sep 5, 2024</p>
+              <p style={{ fontSize: 10, color: '#6b7280', marginTop: 1 }}>Approved by Sarah M. · Sep 5, 2026</p>
             </div>
           </div>
 

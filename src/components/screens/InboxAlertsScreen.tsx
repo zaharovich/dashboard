@@ -10,7 +10,7 @@ const ALERTS = [
     iconBg: '#fef2f2',
     iconColor: '#EF4444',
     title: 'Certification expires soon',
-    body: 'Your BLS Certification expires in 14 days (Oct 11, 2024). Book renewal to stay compliant.',
+    body: 'Your BLS Certification expires in 14 days (Oct 11, 2026). Book renewal to stay compliant.',
     time: 'Today',
     urgent: true,
     actions: [
@@ -36,7 +36,7 @@ const ALERTS = [
     iconBg: '#f5f3ff',
     iconColor: '#7C3AED',
     title: 'Mandatory training due',
-    body: 'Annual Infection Control Training must be completed by Oct 31, 2024.',
+    body: 'Annual Infection Control Training must be completed by Oct 31, 2026.',
     time: 'Yesterday',
     urgent: false,
     actions: [

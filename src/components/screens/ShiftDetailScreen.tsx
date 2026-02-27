@@ -39,7 +39,7 @@ export const ShiftDetailScreen: React.FC = () => {
             <span style={{ fontSize: 10, fontWeight: 700, background: '#eff3ff', color: '#3B5BDB', padding: '3px 8px', borderRadius: 20 }}>
               REGULAR SHIFT
             </span>
-            <span style={{ fontSize: 10, color: '#9ca3af' }}>Sep 18, 2024</span>
+            <span style={{ fontSize: 10, color: '#9ca3af' }}>Sep 18, 2026</span>
           </div>
           <p style={{ fontSize: 18, fontWeight: 800, color: '#1e2d5a', marginTop: 6 }}>MER 2N Medical</p>
         </div>

@@ -51,7 +51,7 @@ export const DayDetailScreen: React.FC = () => {
 
         {/* Date header */}
         <div style={{ padding: '4px 20px 8px' }}>
-          <p style={{ fontSize: 13, fontWeight: 700, color: '#111827' }}>Wednesday, Sep 18, 2024</p>
+          <p style={{ fontSize: 13, fontWeight: 700, color: '#111827' }}>Wednesday, Sep 18, 2026</p>
           <p style={{ fontSize: 10, color: '#9ca3af', marginTop: 1 }}>1 shift scheduled</p>
         </div>
 

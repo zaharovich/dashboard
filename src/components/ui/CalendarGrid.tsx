@@ -56,7 +56,7 @@ export const CalendarGrid: React.FC<CalendarGridProps> = ({
       <div className="flex items-center justify-between" style={{ marginBottom: 4 }}>
         <button style={{ fontSize: 12, color: '#9ca3af', padding: '0 4px' }}>‹</button>
         <span style={{ fontSize: compact ? 11 : 12, fontWeight: 600, color: '#374151' }}>
-          September 2024
+          September 2026
         </span>
         <button style={{ fontSize: 12, color: '#9ca3af', padding: '0 4px' }}>›</button>
       </div>

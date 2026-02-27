@@ -43,7 +43,7 @@ export const WeekViewScreen: React.FC = () => {
         {/* Week label */}
         <div className="flex items-center justify-between" style={{ marginBottom: 8 }}>
           <button style={{ fontSize: 11, color: '#9ca3af' }}>‹</button>
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#374151' }}>Sep 15 – Sep 21, 2024</span>
+          <span style={{ fontSize: 11, fontWeight: 700, color: '#374151' }}>Sep 15 – Sep 21, 2026</span>
           <button style={{ fontSize: 11, color: '#9ca3af' }}>›</button>
         </div>
 

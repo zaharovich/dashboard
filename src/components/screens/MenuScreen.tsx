@@ -100,7 +100,7 @@ export const MenuScreen: React.FC = () => {
 
         {/* Footer */}
         <div style={{ padding: '10px 20px', borderTop: '1px solid #f1f1f4', flexShrink: 0 }}>
-          <p style={{ fontSize: 9, color: '#d1d5db' }}>MedSchedule Pro v2.4.1 · © 2024 HealthTech Systems Inc.</p>
+          <p style={{ fontSize: 9, color: '#d1d5db' }}>MedSchedule Pro v2.4.1 · © 2026 HealthTech Systems Inc.</p>
         </div>
       </div>
     </div>

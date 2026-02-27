@@ -116,7 +116,7 @@ export default function App() {
 
           <div className="text-right">
             <p className="text-white/20 text-xs uppercase tracking-widest mb-1">Confidential</p>
-            <p className="text-white/40 text-sm">Version 1.0 · 2024</p>
+            <p className="text-white/40 text-sm">Version 1.0 · 2026</p>
             <p className="text-white/20 text-xs mt-1">For internal review only</p>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function App() {
       {/* Footer */}
       <footer className="px-8 py-8 border-t border-white/5 mt-6">
         <div className="max-w-[1800px] mx-auto flex items-center justify-between">
-          <p className="text-white/20 text-xs">© 2024 HealthTech Systems Inc. · All rights reserved.</p>
+          <p className="text-white/20 text-xs">© 2026 HealthTech Systems Inc. · All rights reserved.</p>
           <p className="text-white/20 text-xs">Confidential — For client review only</p>
         </div>
       </footer>

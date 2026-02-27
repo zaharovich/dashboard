@@ -6,10 +6,10 @@ type CertStatus = 'valid' | 'expiring' | 'expired';
 
 const CERTS: { name: string; issuer: string; expires: string; status: CertStatus; daysLeft?: number }[] = [
   { name: 'RN License — California',    issuer: 'California BRN',         expires: 'Mar 15, 2026', status: 'valid' },
-  { name: 'BLS Certification',          issuer: 'American Heart Assoc.',  expires: 'Oct 11, 2024', status: 'expiring', daysLeft: 14 },
+  { name: 'BLS Certification',          issuer: 'American Heart Assoc.',  expires: 'Oct 11, 2026', status: 'expiring', daysLeft: 14 },
   { name: 'ACLS Certification',         issuer: 'American Heart Assoc.',  expires: 'Jan 22, 2025', status: 'valid' },
-  { name: 'Infection Control Training', issuer: 'Internal — HealthTech',  expires: 'Oct 31, 2024', status: 'expiring', daysLeft: 34 },
-  { name: 'NIH Stroke Scale',           issuer: 'NIH',                    expires: 'Aug 01, 2024', status: 'expired' },
+  { name: 'Infection Control Training', issuer: 'Internal — HealthTech',  expires: 'Oct 31, 2026', status: 'expiring', daysLeft: 34 },
+  { name: 'NIH Stroke Scale',           issuer: 'NIH',                    expires: 'Aug 01, 2026', status: 'expired' },
 ];
 
 const STATUS_CONFIG: Record<CertStatus, { Icon: typeof BadgeCheck; color: string; bg: string; label: string }> = {
