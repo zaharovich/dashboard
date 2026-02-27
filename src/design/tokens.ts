@@ -1,0 +1,53 @@
+export const colors = {
+  navy: {
+    950: '#0d1529',
+    900: '#152040',
+    800: '#1e2d5a',
+    700: '#334685',
+  },
+  brand: {
+    blue: '#3B5BDB',
+    blueLight: '#4C6EF5',
+    blueDark: '#2F4AC2',
+    green: '#12B76A',
+    greenDark: '#027A48',
+    orange: '#F59E0B',
+    red: '#EF4444',
+    purple: '#7C3AED',
+  },
+  shift: {
+    work: '#3B5BDB',
+    ot: '#7C3AED',
+    pto: '#059669',
+    sick: '#F59E0B',
+    callout: '#EF4444',
+    calloff: '#6B7280',
+    personal: '#06B6D4',
+    open: '#10B981',
+    ai: '#8B5CF6',
+  },
+  neutral: {
+    white: '#FFFFFF',
+    50: '#F9FAFB',
+    100: '#F3F4F6',
+    200: '#E5E7EB',
+    300: '#D1D5DB',
+    400: '#9CA3AF',
+    500: '#6B7280',
+    600: '#4B5563',
+    700: '#374151',
+    800: '#1F2937',
+    900: '#111827',
+  },
+} as const;
+
+export const MOCK_SHIFTS = [
+  { id: '1', day: 1, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '2', day: 1, label: 'Brady', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '3', day: 2, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '4', day: 2, label: 'Brady', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '5', day: 3, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '6', day: 3, label: 'Brady', type: 'ot' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '7', day: 4, label: 'Binns', type: 'work' as const, time: '7a–7p', unit: 'MER 2N' },
+  { id: '8', day: 5, label: 'PTO', type: 'pto' as const, time: 'All Day', unit: '' },
+] as const;
