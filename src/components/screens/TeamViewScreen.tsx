@@ -96,7 +96,6 @@ export const TeamViewScreen: React.FC = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 4 }}>
             {DATES.map((date, i) => {
               const count = TEAM_SHIFTS.filter(m => m.days[i]).length;
-              const isToday = date === today;
               return (
                 <div key={i} style={{ textAlign: 'center' }}>
                   <p style={{ fontSize: 11, fontWeight: 800, color: count >= 3 ? '#12B76A' : '#F59E0B' }}>{count}</p>
