@@ -94,7 +94,7 @@ export const TeamViewScreen: React.FC = () => {
         <div style={{ marginTop: 6, padding: '10px 12px', background: '#eff3ff', borderRadius: 14, border: '1px solid #c7d2fe' }}>
           <p style={{ fontSize: 9, fontWeight: 700, color: '#1e2d5a', marginBottom: 6 }}>Week Coverage · MER 2N</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 4 }}>
-            {DATES.map((date, i) => {
+            {DATES.map((_date, i) => {
               const count = TEAM_SHIFTS.filter(m => m.days[i]).length;
               return (
                 <div key={i} style={{ textAlign: 'center' }}>
