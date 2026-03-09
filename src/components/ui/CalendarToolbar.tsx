@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers3 } from 'lucide-react';
+import { Layers3, Sparkles } from 'lucide-react';
 
 type ViewMode = 'week' | 'month' | '6w';
 type TeamMode = 'me' | 'team';
@@ -7,11 +7,14 @@ type TeamMode = 'me' | 'team';
 interface CalendarToolbarProps {
   view?: ViewMode;
   team?: TeamMode;
+  /** When true, AI-suggested days are highlighted on the calendar */
+  aiMode?: boolean;
 }
 
 export const CalendarToolbar: React.FC<CalendarToolbarProps> = ({
   view = 'week',
   team = 'me',
+  aiMode = true,
 }) => {
   return (
     <div
@@ -54,13 +57,29 @@ export const CalendarToolbar: React.FC<CalendarToolbarProps> = ({
         ))}
       </div>
 
-      {/* Layers icon */}
-      <button
-        className="flex items-center justify-center bg-gray-100 rounded-full"
-        style={{ width: 32, height: 32 }}
-      >
-        <Layers3 size={15} color="#6b7280" strokeWidth={1.8} />
-      </button>
+      {/* AI Mode + Layers */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+        <button
+          className="flex items-center gap-1.5 rounded-full border px-2.5 py-1.5"
+          style={{
+            fontSize: 10,
+            fontWeight: 700,
+            color: aiMode ? '#6D28D9' : '#6b7280',
+            background: aiMode ? 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)' : '#f9fafb',
+            borderColor: aiMode ? 'rgba(139,92,246,0.4)' : '#e5e7eb',
+            borderWidth: 1.5,
+          }}
+        >
+          <Sparkles size={12} color={aiMode ? '#8B5CF6' : '#9ca3af'} strokeWidth={2} />
+          AI Mode
+        </button>
+        <button
+          className="flex items-center justify-center bg-gray-100 rounded-full"
+          style={{ width: 32, height: 32 }}
+        >
+          <Layers3 size={15} color="#6b7280" strokeWidth={1.8} />
+        </button>
+      </div>
     </div>
   );
 };

@@ -3,13 +3,14 @@ import { AppNavbar } from '../ui/AppNavbar';
 import { CalendarToolbar } from '../ui/CalendarToolbar';
 import { BottomTabBar } from '../ui/BottomTabBar';
 
+// 0 = no shift, 1 = day (7a), 2 = night (7p)
 const TEAM_SHIFTS = [
-  { name: 'John Smith',   role: 'RN',  days: [0,1,1,1,0,1,0], color: '#3B5BDB' },
-  { name: 'Sarah M.',     role: 'RN',  days: [1,0,1,0,1,0,1], color: '#7C3AED' },
-  { name: 'James K.',     role: 'LVN', days: [0,1,0,1,1,1,0], color: '#12B76A' },
-  { name: 'Priya N.',     role: 'RN',  days: [1,1,0,0,1,0,1], color: '#F59E0B' },
-  { name: 'Carlos R.',    role: 'CNA', days: [0,0,1,1,0,1,1], color: '#06B6D4' },
-  { name: 'Dana W.',      role: 'RN',  days: [1,0,0,1,1,0,0], color: '#EF4444' },
+  { name: 'John Smith',   role: 'RN',  days: [0,1,1,1,0,2,0] as const, color: '#3B5BDB' },
+  { name: 'Sarah M.',     role: 'RN',  days: [1,0,2,0,1,0,1] as const, color: '#7C3AED' },
+  { name: 'James K.',     role: 'LVN', days: [0,1,0,2,1,1,0] as const, color: '#12B76A' },
+  { name: 'Priya N.',     role: 'RN',  days: [1,1,0,0,2,0,1] as const, color: '#F59E0B' },
+  { name: 'Carlos R.',    role: 'CNA', days: [0,0,1,1,0,2,1] as const, color: '#06B6D4' },
+  { name: 'Dana W.',      role: 'RN',  days: [1,0,0,1,1,0,0] as const, color: '#EF4444' },
 ];
 
 const DAYS = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
@@ -68,25 +69,31 @@ export const TeamViewScreen: React.FC = () => {
               <p style={{ fontSize: 7, color: '#9ca3af' }}>{member.role}</p>
             </div>
 
-            {/* Day cells */}
-            {member.days.map((hasShift, di) => (
-              <div
-                key={di}
-                style={{
-                  height: 38, borderRadius: 8,
-                  background: hasShift ? member.color + '18' : '#f9fafb',
-                  border: hasShift ? `1.5px solid ${member.color}40` : '1.5px solid #f1f1f4',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}
-              >
-                {hasShift && (
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ width: 20, height: 3, borderRadius: 2, background: member.color, margin: '0 auto 2px' }} />
-                    <span style={{ fontSize: 7, fontWeight: 700, color: member.color }}>7a</span>
-                  </div>
-                )}
-              </div>
-            ))}
+            {/* Day cells: 0 = no shift (—), 1 = 7a, 2 = 7p */}
+            {member.days.map((shift, di) => {
+              const hasShift = shift !== 0;
+              const label = shift === 1 ? '7a' : shift === 2 ? '7p' : null;
+              return (
+                <div
+                  key={di}
+                  style={{
+                    height: 38, borderRadius: 8,
+                    background: hasShift ? member.color + '18' : '#f9fafb',
+                    border: hasShift ? `1.5px solid ${member.color}40` : '1.5px dashed #e5e7eb',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}
+                >
+                  {hasShift ? (
+                    <div style={{ textAlign: 'center' }}>
+                      <div style={{ width: 20, height: 3, borderRadius: 2, background: member.color, margin: '0 auto 2px' }} />
+                      <span style={{ fontSize: 7, fontWeight: 700, color: member.color }}>{label}</span>
+                    </div>
+                  ) : (
+                    <span style={{ fontSize: 8, color: '#d1d5db', fontWeight: 500 }}>—</span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         ))}
 
@@ -95,7 +102,7 @@ export const TeamViewScreen: React.FC = () => {
           <p style={{ fontSize: 9, fontWeight: 700, color: '#1e2d5a', marginBottom: 6 }}>Week Coverage · Floor 2</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', gap: 4 }}>
             {DATES.map((_date, i) => {
-              const count = TEAM_SHIFTS.filter(m => m.days[i]).length;
+              const count = TEAM_SHIFTS.filter(m => m.days[i] !== 0).length;
               const display = count === 0 ? '' : String(count);
               return (
                 <div key={i} style={{ textAlign: 'center' }}>

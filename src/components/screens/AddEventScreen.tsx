@@ -5,8 +5,8 @@ import { CalendarGrid } from '../ui/CalendarGrid';
 import { BottomTabBar } from '../ui/BottomTabBar';
 
 const SHIFTS = [
-  { hrs: '12 hrs', time: '07:00 – 19:00', rate: '+$15.00', rateLabel: 'extra to base', incentive: '+$25/hr', unit: 'Floor 2', status: 'Open · RN', open: true },
-  { hrs: '12 hrs', time: '07:00 – 19:00', rate: '$15.00', rateLabel: undefined, incentive: undefined, unit: 'Floor 2', status: 'Scheduled by Manager', open: false },
+  { hrs: '12 hrs', time: '07:00 – 19:00', incentive: '+$25/hr', unit: 'Floor 2', status: 'Open · RN', open: true },
+  { hrs: '12 hrs', time: '07:00 – 19:00', rate: '$15.00', unit: 'Floor 2', status: 'Scheduled by Manager', open: false },
 ];
 
 export const AddEventScreen: React.FC = () => {
@@ -97,12 +97,10 @@ export const AddEventScreen: React.FC = () => {
                   <p style={{ fontSize: 10, color: '#6b7280', marginTop: 2 }}>{s.time}</p>
                   <p style={{ fontSize: 11, fontWeight: 600, color: '#374151', marginTop: 2 }}>{s.unit}</p>
                   <div className="flex items-center flex-wrap" style={{ gap: 6, marginTop: 4 }}>
-                    <span style={{ fontSize: 14, fontWeight: 800, color: '#12B76A' }}>{s.rate}</span>
-                    {s.rateLabel && (
-                      <span style={{ fontSize: 9, color: '#6b7280' }}>({s.rateLabel})</span>
-                    )}
-                    {s.incentive && (
+                    {s.incentive != null ? (
                       <span style={{ fontSize: 11, fontWeight: 700, color: '#059669' }}>Incentive {s.incentive}</span>
+                    ) : (
+                      <span style={{ fontSize: 14, fontWeight: 800, color: '#12B76A' }}>{s.rate}</span>
                     )}
                     <span style={{ fontSize: 10, color: '#9ca3af' }}>· {s.status}</span>
                   </div>

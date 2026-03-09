@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppNavbar } from '../ui/AppNavbar';
 import { CalendarToolbar } from '../ui/CalendarToolbar';
 import { CalendarGrid } from '../ui/CalendarGrid';
 import { BottomTabBar } from '../ui/BottomTabBar';
+import { AiSuggestionSheet } from './AiSuggestionSheet';
 
 export const MonthViewScreen: React.FC = () => {
+  const [aiDay, setAiDay] = useState<number | null>(null);
+
   return (
-    <div className="flex flex-col bg-white" style={{ height: '100%' }}>
-      <AppNavbar showBadge />
+    <div className="flex flex-col bg-white relative" style={{ height: '100%' }}>
+      <AppNavbar />
       <CalendarToolbar view="month" team="me" />
 
       {/* Timecard */}
@@ -34,12 +37,25 @@ export const MonthViewScreen: React.FC = () => {
         ))}
       </div>
 
-      {/* Calendar */}
-      <div className="flex-1 overflow-y-auto">
-        <CalendarGrid highlightToday />
+      {/* Calendar — fills remaining height */}
+      <div className="flex-1 overflow-y-auto" style={{ minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+        <CalendarGrid
+          highlightToday
+          fillHeight
+          onAiDayClick={(day) => setAiDay(day)}
+        />
       </div>
 
       <BottomTabBar active="calendar" badge />
+
+      {/* AI suggestion sheet — full screen when an AI day is tapped */}
+      {aiDay !== null && (
+        <AiSuggestionSheet
+          day={aiDay}
+          monthLabel="September 2026"
+          onClose={() => setAiDay(null)}
+        />
+      )}
     </div>
   );
 };
