@@ -97,11 +97,7 @@ export const AddEventScreen: React.FC = () => {
                   <p style={{ fontSize: 10, color: '#6b7280', marginTop: 2 }}>{s.time}</p>
                   <p style={{ fontSize: 11, fontWeight: 600, color: '#374151', marginTop: 2 }}>{s.unit}</p>
                   <div className="flex items-center flex-wrap" style={{ gap: 6, marginTop: 4 }}>
-                    {s.incentive != null ? (
-                      <span style={{ fontSize: 11, fontWeight: 700, color: '#059669' }}>Incentive {s.incentive}</span>
-                    ) : (
-                      <span style={{ fontSize: 14, fontWeight: 800, color: '#12B76A' }}>{s.rate}</span>
-                    )}
+                    <span style={{ fontSize: 11, fontWeight: 700, color: '#059669' }}>Incentive {s.incentive}</span>
                     <span style={{ fontSize: 10, color: '#9ca3af' }}>· {s.status}</span>
                   </div>
                 </div>

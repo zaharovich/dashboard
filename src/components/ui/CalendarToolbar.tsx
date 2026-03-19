@@ -7,14 +7,11 @@ type TeamMode = 'me' | 'team';
 interface CalendarToolbarProps {
   view?: ViewMode;
   team?: TeamMode;
-  /** When true, AI-suggested days are highlighted on the calendar */
-  aiMode?: boolean;
 }
 
 export const CalendarToolbar: React.FC<CalendarToolbarProps> = ({
   view = 'week',
   team = 'me',
-  aiMode = true,
 }) => {
   return (
     <div
