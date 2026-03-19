@@ -80,13 +80,6 @@ export const SixWeekViewScreen: React.FC = () => {
         <div className="flex-1 min-w-0">
           <CalendarToolbar view="6w" team="me" />
         </div>
-        <a
-          href="#"
-          className="rounded-lg font-semibold flex-shrink-0"
-          style={{ fontSize: 11, color: '#3B5BDB', padding: '6px 10px', marginRight: 12, background: '#eff3ff' }}
-        >
-          Time Card
-        </a>
       </div>
 
       {/* Planning banner */}
