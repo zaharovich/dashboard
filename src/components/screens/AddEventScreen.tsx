@@ -6,7 +6,7 @@ import { BottomTabBar } from '../ui/BottomTabBar';
 
 const SHIFTS = [
   { hrs: '12 hrs', time: '07:00 – 19:00', incentive: '+$25/hr', unit: 'Floor 2', status: 'Open · RN', open: true },
-  { hrs: '12 hrs', time: '07:00 – 19:00', rate: '$15.00', unit: 'Floor 2', status: 'Scheduled by Manager', open: false },
+  { hrs: '12 hrs', time: '07:00 – 19:00', incentive: '+$25/hr', unit: 'Floor 2', status: 'Scheduled by Manager', open: false },
 ];
 
 export const AddEventScreen: React.FC = () => {
